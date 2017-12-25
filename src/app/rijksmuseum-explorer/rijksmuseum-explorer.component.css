@@ -1,0 +1,27 @@
+.flex-container {
+  display: flex;
+}
+
+.art-objects {
+  flex: 0 0 300px;
+  margin-right: 20px;
+}
+
+.art-object {
+  padding: 10px;
+  background: #eee;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.art-object:hover,
+.art-object.is-selected {
+  background: #ccc;
+}
+
+.art-object-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

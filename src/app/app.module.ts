@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
-import { AppComponent } from './app.component';
+import { RijksmuseumExplorerComponent } from './rijksmuseum-explorer/rijksmuseum-explorer.component';
+import { RijksmuseumService } from './rijksmuseum.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    RijksmuseumExplorerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [RijksmuseumService],
+  bootstrap: [RijksmuseumExplorerComponent]
 })
 export class AppModule { }

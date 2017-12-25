@@ -1,0 +1,22 @@
+<h1>Rijksmuseum explorer</h1>
+<div class="flex-container">
+  <div class="art-objects">
+    <div
+      *ngFor="let artObject of artObjects"
+      class="art-object"
+      [class.is-selected]="selectedArtObjectNumber === artObject.objectNumber"
+      (click)="selectArtObject(artObject.objectNumber)"
+    >
+      {{artObject.title}}
+    </div>
+  </div>
+  <div class="art-object-details" *ngIf="selectedArtObjectDetails">
+    <h2>{{selectedArtObjectDetails.longTitle}}</h2>
+    <img
+      class="art-object-img"
+      src="{{selectedArtObjectDetails.webImage.url}}"
+      alt="{{selectedArtObjectDetails.title}}"
+    >
+    <p>{{selectedArtObjectDetails.description}}</p>
+  </div>
+</div>
